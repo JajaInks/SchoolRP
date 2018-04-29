@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.view.ControlerAdmin">
+   <children>
+      <SplitPane dividerPositions="0.4" layoutY="111.0" prefHeight="289.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ComboBox fx:id="cbLevel" layoutX="43.0" layoutY="34.0" prefWidth="150.0" promptText="Level" />
+                  <Button fx:id="btnAjouter" layoutX="43.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleAjouter" prefHeight="25.0" prefWidth="150.0" text="Ajouter" />
+                  <Button fx:id="btnSupprimer" layoutX="43.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleSupp" prefHeight="25.0" prefWidth="150.0" text="Supprimer" />
+                  <TextField fx:id="txtNom" layoutX="44.0" layoutY="74.0" promptText="nom" />
+                  <TextField fx:id="txtPrenom" layoutX="44.0" layoutY="109.0" promptText="prenom" />
+                  <TextField fx:id="txtPassword" layoutX="44.0" layoutY="144.0" promptText="password" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="UtilisateurView" layoutY="14.0" prefHeight="287.3333333333333" prefWidth="417.3333333333333" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="48.6666259765625" text="id" />
+                      <TableColumn fx:id="colNom" prefWidth="97.33331680297852" text="Nom" />
+                        <TableColumn fx:id="colPrenom" prefWidth="68.00006103515625" text="Prenom" />
+                        <TableColumn fx:id="colLevel" prefWidth="203.33326721191406" text="Level" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="268.0" text="Interface Administrateur : Gestion des utilisateurs." />
+   </children>
+</AnchorPane>

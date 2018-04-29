@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.view.edt.ControlerCalendar2">
+   <children>
+      <SplitPane dividerPositions="0.3" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="14.0" text="Votre planning " />
+                  <Button fx:id="btnEdtToAcc" layoutX="15.0" layoutY="257.0" mnemonicParsing="false" onAction="#backAcc" text="Retour Acceuil" />
+                  <Text layoutX="17.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appuyez sur le jours pour obtenir votre emploie du temps." wrappingWidth="140.13671875" />
+                  <DatePicker fx:id="picker" layoutX="30.0" layoutY="109.0" onAction="#handlePicker" prefHeight="25.0" prefWidth="114.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane prefHeight="398.0" prefWidth="416.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TableView fx:id="SessionView" layoutX="14.0" prefHeight="297.3333333333333" prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colNom" minWidth="-1.0" prefWidth="165.333394408226" text="nom session" />
+                      <TableColumn fx:id="colDateDebut" minWidth="-1.0" prefWidth="116.66661071777344" text=" date debut session" />
+                        <TableColumn fx:id="ColDateFin" prefWidth="132.66671752929688" text="date fin session " />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
